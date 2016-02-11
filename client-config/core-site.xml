@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+    	<name>hadoop.tmp.dir</name>
+    	<value>file:///tmp/hadoop-${user.name}</value>
+    </property>
+    <property>
+        <name>fs.default.name</name>
+        <value>viewfs:///</value>
+    </property>
+    <property>
+        <name>fs.viewfs.mounttable.default.link./home</name>
+        <value>hdfs://NAMENODE_HOST:NAMENODE_PORT</value>
+    </property>
+    <property>
+        <name>fs.viewfs.mounttable.default.link./tmp</name>
+        <value>hdfs://NAMENODE_HOST:NAMENODE_PORT/tmp</value>
+    </property>
+    <property>
+        <name>fs.viewfs.mounttable.default.link./data</name>
+        <value>hdfs://augusta:56780/data</value>
+    </property>
+</configuration>

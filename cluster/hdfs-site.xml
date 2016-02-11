@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>${hadoop.tmp.dir}/name</value>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>${hadoop.tmp.dir}/data</value>
+    </property>
+    <property>
+        <name>dfs.namenode.http-address</name>
+        <value>NAME_NODE:50070</value>
+        <description>Location of the DFS web UI</description>
+    </property>
+    <property>
+        <name>dfs.namenode.secondary.http-address</name>
+        <value>SECONDARY_NAME_NODE:50070</value>
+        <description>Web UI of the secondary name node</description>
+    </property>
+    <property>
+        <name>dfs.replication</name>
+        <value>7</value>
+    </property>
+    <property>
+        <name>dfs.datanode.address</name>
+        <value>0.0.0.0:56785</value>
+        <description>The address where the datanode server will listen to. If the port is 0 then the server will start
+            on a free port.
+        </description>
+    </property>
+    <property>
+        <name>dfs.datanode.http.address</name>
+        <value>0.0.0.0:56786</value>
+        <description>The datanode http server address and port. If the port is 0 then the server will start on a free
+            port.
+        </description>
+    </property>
+    <property>
+        <name>dfs.datanode.ipc.address</name>
+        <value>0.0.0.0:56787</value>
+        <description>The datanode ipc server address and port. If the port is 0 then the server will start on a free
+            port.
+        </description>
+    </property>
+</configuration>
